@@ -272,7 +272,7 @@
     @include media(desktop) {
         margin: 0;
         position: absolute;
-        bottom: calc(78px - (100vh - 900px) / 2);
+        bottom: calc(78px + (100vh - 900px));
         right: calc((100vw - 1440px) / 2);
     }
 }
