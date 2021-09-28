@@ -1,0 +1,278 @@
+.section {
+    min-height: 100vh;
+    background: $colorBlack;
+
+    @include media(desktop) {
+        padding: 130px 0 100px 165px;
+    }
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    background: linear-gradient(rgba($colorBlack, 0.9), rgba($colorBlack, 0.9)),
+        url("../assets/mobile/image-host.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 62px 24px;
+
+    @include media(tablet) {
+        width: 768px;
+        background: url("../assets/tablet/image-host.jpg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding: 50px 39px;
+    }
+
+    @include media(desktop) {
+        width: 1275px;
+        background: url("../assets/desktop/image-host.jpg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding: 0;
+    }
+}
+
+.logo {
+    text-align: center;
+    // height: 56px;
+    margin-bottom: 57px;
+
+    img {
+        height: 56px;
+    }
+
+    @include media(tablet) {
+        text-align: left;
+        margin-bottom: 152px;
+    }
+
+    @include media(desktop) {
+        transform: translateY(-50%);
+        margin-bottom: 103px;
+    }
+}
+
+.form {
+    text-align: center;
+
+    @include media(tablet) {
+        text-align: left;
+        background: $colorBlack;
+        width: 635px;
+    }
+
+    @include media(desktop) {
+        width: 723px;
+        transform: translateY(-28px);
+    }
+
+    .title {
+        font-size: 26px;
+        color: $colorGreen;
+        font-weight: 300;
+        line-height: 38px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+        span {
+            color: $colorWhite;
+        }
+
+        @include media(tablet) {
+            font-size: 48px;
+            line-height: 56px;
+            padding-top: 93px;
+            margin-bottom: 31px;
+        }
+
+        @include media(desktop) {
+            font-size: 52px;
+            line-height: 62px;
+            padding-top: 88px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .text {
+        font-size: 15px;
+        color: $colorGrayLight;
+        line-height: 25px;
+        margin-bottom: 33px;
+
+        @include media(tablet) {
+            width: 445px;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .vendor-list-small {
+        padding: 0 5px;
+        margin-bottom: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .vendor-item-spotify {
+            width: 56px;
+        }
+
+        .vendor-item-apple {
+            width: 45px;
+        }
+
+        .vendor-item-google {
+            width: 73px;
+        }
+
+        .vendor-item-pocket {
+            width: 77px;
+        }
+
+        @include media(tablet) {
+            display: none;
+        }
+    }
+
+    .form-control {
+        display: flex;
+        flex-direction: column;
+
+        @include media(tablet) {
+            width: 427px;
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px 32px;
+            border: none;
+            border-radius: 28px;
+            background-color: $colorGrayDark;
+            color: $colorWhite;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-bottom: 16px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                font-size: 14px;
+                font-weight: 600;
+                color: $colorGrayLight;
+                line-height: 28px;
+            }
+
+            @include media(tablet) {
+                padding: 14px 32px;
+            }
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            color: $colorBlack;
+            font-weight: 600;
+            line-height: 28px;
+            border: none;
+            border-radius: 28px;
+            background: $colorGreen;
+            text-align: center;
+            text-transform: capitalize;
+            padding: 9px 0;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background: $colorGreenLight;
+            }
+
+            @include media(tablet) {
+                width: 162px;
+                margin: 0;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        }
+
+        .info-msg {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            text-align: left;
+            padding-left: 32px;
+            height: 14px;
+
+            @include media(tablet) {
+                margin-bottom: 28px;
+            }
+        }
+
+        .success {
+            color: $colorGreen;
+        }
+
+        .danger {
+            color: $colorRed;
+        }
+    }
+
+    .vendor-list-big {
+        display: none;
+
+        @include media(tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 536px;
+
+            .vendor-item-spotify {
+                width: 96px;
+            }
+
+            .vendor-item-apple {
+                width: 78px;
+            }
+
+            .vendor-item-google {
+                width: 125px;
+            }
+
+            .vendor-item-pocket {
+                width: 129px;
+            }
+        }
+    }
+}
+
+.bg-pattern {
+
+    display: none;
+    height: 104px;
+
+    img {
+        height: 104px;
+    }
+
+    @include media(tablet) {
+        display: block;
+        margin-left: calc(30px + (100vw - 768px) / 2);
+        margin-top: 100px;
+    }
+
+    @include media(desktop) {
+        margin: 0;
+        position: absolute;
+        bottom: calc(78px - (100vh - 900px) / 2);
+        right: calc((100vw - 1440px) / 2);
+    }
+}
